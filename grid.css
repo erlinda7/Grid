@@ -88,3 +88,35 @@ html {
       gap: 1vh 1vw; /*gap: row column*/
       gap:0;
   }
+
+  .grid-explicit .item:nth-child(10) {
+    color: cyan;
+    /*posicionar*/
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    /*atajo para posicionar */
+    grid-row: 2/3; /*grid-area:grid-row-start/grid-row-end */
+    grid-column: 3/5; /* grid-area: grid-column-start/grid-column-end*/
+
+    /*otro atajo para posionar */
+    /* grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
+    grid-area: 2/3/3/5;
+  }
+
+  .grid-explicit .item:nth-child(12) {
+    /*posionar con span*/
+    color: cyan;
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+  .grid-explicit .item:nth-child(15) {
+    color: cyan;
+    grid-row: 1 / span 2;
+    grid-column: 1/ span 2;
+  }
+
+  /*si posicionas explicitamente es mejor posicionar todos los elementos 
+  para que no tenga comportamiento raro como dejar espacio raros, si dejas que los demas se pocisione el flujo de la grid*/
