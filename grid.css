@@ -140,3 +140,29 @@ html {
       grid-column: linea-c1 / linea-c4;
       /* grid-area: linea-r3 / linea-r4 / linea-c1 / linea-c4; */   /*no funciona grid area con nombres de linea*/
   }
+
+  .grid-areas {
+      display: grid;
+      /*Grid de 2cx3r*/
+      grid-template-columns: 1fr 200px;
+      grid-template-rows: 100px repeat(2,1fr) 60px;
+
+      /*posicionamiento con areas*/
+      grid-template-areas: 
+        "header header"
+        "content sidebar"
+        "content ." /*  el . dice que esa celda se quede vacio*/
+        "footer footer";
+  }
+  .header {
+      grid-area: header; /*crear nombres de areas*/
+  }
+  .content {
+      grid-area: content;
+  }
+  .sidebar {
+      grid-area: sidebar;
+  }
+  .footer {
+      grid-area: footer;
+  }
