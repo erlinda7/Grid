@@ -120,3 +120,23 @@ html {
 
   /*si posicionas explicitamente es mejor posicionar todos los elementos 
   para que no tenga comportamiento raro como dejar espacio raros, si dejas que los demas se pocisione el flujo de la grid*/
+
+  .grid-line-names {
+      display: grid;
+      /*Grid de 3cx3r*/
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+
+      /*crear el GRid com nombres de grid lines --- nombre de linea tamaño*/
+      grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
+      grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
+
+      grid-template-rows: [linea-r1] auto [linea-r2] auto [linea-r3] auto [linea-r4];
+  }
+
+  .grid-line-names .item:nth-child(3) {
+      color: cyan;
+      grid-row: linea-r3 / linea-r4;
+      grid-column: linea-c1 / linea-c4;
+      /* grid-area: linea-r3 / linea-r4 / linea-c1 / linea-c4; */   /*no funciona grid area con nombres de linea*/
+  }
