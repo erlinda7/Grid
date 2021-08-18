@@ -58,3 +58,33 @@ html {
     background-color: #666;
     border: medium solid #999;
   }
+  /*///////////////////////////////////////////*/
+  .grid-explicit {
+      display: grid;
+      /*Grid de 3cx3r*/
+      grid-template-columns: 50% 100px 1fr;  /*fr el espacio sobrante*/
+      grid-template-rows: 2rem 20vh 30%;  /*30% del contenedor que tiene 80vh*/
+
+      /*Grid de 5cx4r*/
+      grid-template-columns: repeat(5, 20%); /*5 filas, 20% tamaño*/
+      grid-template-rows: repeat(4, 25%);
+
+      grid-template-columns: repeat(5, 1fr); /*es proporcional al 20%*/
+      grid-template-rows: repeat(4, auto); /*auto se adecua al texto el alto de la fila*/
+
+      grid-template-rows: repeat(4, 1fr); /*1 fr es proporcional a auto*/
+
+      /*Grid de 4cx5r*/
+      grid-template-columns: 20% repeat(2,30%) 20%;  /*para aplicar repeat deben continuas*/
+      grid-template-rows: repeat(5, auto);
+
+      /*deprecada*/
+      grid-row-gap: 1rem;
+      grid-column-gap: 2rem;
+      grid-gap: 100px 0px;
+
+      row-gap: 1rem;
+      column-gap: 2rem;
+      gap: 1vh 1vw; /*gap: row column*/
+      gap:0;
+  }
