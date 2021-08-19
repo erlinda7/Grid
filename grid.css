@@ -260,3 +260,25 @@ html {
   .grid-order .item:nth-child(5){
     order: -1; /*el order no funciona si posicionamiento con lineas o areas*/
   }
+
+  .grid-align{
+    display: grid;
+    /*Grid de 3cx2r*/
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 200px);
+    /*justify-items  alinea en x en horizontal dentro la celda*/
+    justify-items: stretch; /*default*/
+    justify-items: start;
+    justify-items: end;
+    justify-items: center;
+    /*align-items alinea en y*/
+    align-items: stretch; /*default en vertical*/
+    align-items: start;
+    align-items: end;
+    align-items: center;
+  }
+
+  .grid-align .item:nth-child(4) {
+    justify-self: start;
+    align-self: start;
+  }
