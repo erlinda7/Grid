@@ -327,3 +327,18 @@ html {
 
     grid-auto-rows: 150px; /*los que estan fuera de la grid explicita toman tamaño 150px*/
   }
+
+  .grid-dynamics {
+    display: grid;
+    /*Grid de 4cx?r*/
+    grid-template-columns: repeat(4, 100px);
+
+    /*auto-fill Rellena la grid con tracks generados dinamicamente*/
+    grid-template-columns: repeat(auto-fill, 100px);
+
+    /*auto-fit Ajusta la grid con los tracks existentes*/
+    grid-template-columns: repeat(auto-fit, 100px);
+
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
