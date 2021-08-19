@@ -241,3 +241,22 @@ html {
     grid-column: 2/4;
     grid-row: 2/4;
   }
+
+  .grid-order{
+    display: grid;
+    /*Grid de 3cx2r*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: column;
+  }
+  .grid-order .item:nth-child(1){
+    /*deafult es 0, valores positivos y negativos*/
+    order:1;
+  }
+  .grid-order .item:nth-child(2) {
+    /*0,-1,1...*/
+    order: 2;
+  }
+  .grid-order .item:nth-child(5){
+    order: -1; /*el order no funciona si posicionamiento con lineas o areas*/
+  }
