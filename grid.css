@@ -186,3 +186,24 @@ html {
     grid-auto-flow: column;
     grid-auto-columns: 50px; /*va con column*/
   }
+
+  .grid-flow-dense{
+    display: grid;
+    /*Grid de 5cx4r*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 200px);
+    grid-auto-flow: row dense; /*para que ocupen los espacios vacios acodandose en fila*/
+    grid-auto-flow: column dense;
+  }
+
+  /*con row dense*/
+ /*  .grid-flow-dense .item:nth-child(9) {
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
+  } */
+  .grid-flow-dense .item:nth-child(11) {
+    color: cyan;
+    grid-row: span 3;
+    grid-column: span 3;
+  }
