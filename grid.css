@@ -166,3 +166,12 @@ html {
   .footer {
       grid-area: footer;
   }
+
+  .grid-implicit {
+    /*Grid de 4cx3r*/
+    width: 40%;
+    display: grid;
+    display: inline-grid; /*si queremos tener varios grid en una misma fila*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+  }
